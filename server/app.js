@@ -1,8 +1,3 @@
-// process.env['MYSQL_HOST'] = "localhost";
-// process.env['MYSQL_PORT'] = "3306";
-// process.env['MYSQL_USER'] = "root";
-// process.env['MYSQL_PASSWORD'] = "";
-
 /**************************/
 /* config */
 var application_root = __dirname;
@@ -42,6 +37,6 @@ app.use('/', routes);
 /**************************/
 
 
-var server = app.listen((process.env.PORT || 9000), function() {
+var server = app.listen((process.env.PORT || 8080), function() {
   console.log('Express server listening on port ' + server.address().port);
 });

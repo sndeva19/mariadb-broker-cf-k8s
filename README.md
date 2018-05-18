@@ -35,7 +35,7 @@ I also prefer to use [MySQL Workbench](http://dev.mysql.com/downloads/workbench/
 
 Clone this repository.
 ```
-git clone https://github.com/komushi/cf-mysql-node-broker
+git clone https://github.com/fabiogomezdiaz/cf-mysql-node-broker
 cd cf-mysql-node-broker
 ```
 
@@ -150,7 +150,7 @@ If you are confident enough about this example you can skip the local test and d
 
 Clone this repository,
 ```
-git clone https://github.com/komushi/cf-mysql-node-broker
+git clone https://github.com/fabiogomezdiaz/cf-mysql-node-broker
 cd cf-mysql-node-broker
 ```
 

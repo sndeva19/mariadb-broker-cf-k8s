@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/komushi/cf-mysql-node-broker.git"
+    "url": "https://github.com/fabiogomezdiaz/cf-mysql-node-broker.git"
   },
   "keywords": [
     "cf",
@@ -21,17 +21,17 @@
   "author": "Lei Xu",
   "license": "ISC",
   "dependencies": {
-    "express": "~4.0.0",
+    "express": "4.0.0",
     "body-parser": "1.10.x",
-    "basic-auth": "~1.0.0",
-    "fs": "~0.0.2",
+    "basic-auth": "1.0.0",
+    "fs": "0.0.2",
     "js-yaml": "3.2.x",
     "q": "1.1.x",
-    "mysql": "~2.5.0",
+    "mysql": "2.5.0",
     "cfenv": "1.0.x"
   },
   "bugs": {
-    "url": "https://github.com/komushi/cf-mysql-node-broker/issues"
+    "url": "https://github.com/fabiogomezdiaz/cf-mysql-node-broker/issues"
   },
-  "homepage": "https://github.com/komushi/cf-mysql-node-broker"
+  "homepage": "https://github.com/fabiogomezdiaz/cf-mysql-node-broker"
 }

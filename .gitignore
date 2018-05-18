@@ -1,6 +1,9 @@
-logs/*
 !.gitkeep
-node_modules/
-tmp
 .DS_Store
 .idea
+env.sh.*
+logs/*
+manifest.yaml.*
+node_modules
+npm-debug.log
+tmp

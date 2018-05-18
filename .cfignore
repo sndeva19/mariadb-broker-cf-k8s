@@ -1,2 +1,10 @@
-node_modules/
-resources/logo.png
+!.gitkeep
+.DS_Store
+.idea
+chart/
+Dockerfile
+env.sh
+env.sh.*
+manifest.yaml.*
+node_modules
+tmp
