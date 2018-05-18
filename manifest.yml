@@ -11,4 +11,4 @@ applications:
     MYSQL_USER: <root privilege user>
     MYSQL_PASSWORD: <password>
   routes:
-    - route: cf-mysql-node-broker.bluemix.chechu.com
+    - route: cf-mysql-node-broker.mybluemix.net
