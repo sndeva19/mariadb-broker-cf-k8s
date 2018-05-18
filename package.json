@@ -22,14 +22,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "~4.0.0",
-    "body-parser":"1.10.x",
-    "basic-auth":"~1.0.0",
-    "fs":"~0.0.2",
-    "js-yaml":"3.2.x",
-    "q":"1.1.x",
-    "mysql":"~2.5.0",
-    "cfenv":"1.0.x"
-
+    "body-parser": "1.10.x",
+    "basic-auth": "~1.0.0",
+    "fs": "~0.0.2",
+    "js-yaml": "3.2.x",
+    "q": "1.1.x",
+    "mysql": "~2.5.0",
+    "cfenv": "1.0.x"
   },
   "bugs": {
     "url": "https://github.com/komushi/cf-mysql-node-broker/issues"

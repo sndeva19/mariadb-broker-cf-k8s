@@ -77,7 +77,7 @@ content-length: 85107
 Date: Fri, 20 Feb 2015 09:40:55 GMT
 Connection: keep-alive
 > 
-{"services":[{"name":"mac-mysql","id":"3101b971-1044-4816-a7ac-9ded2e028079","description":"MySQL service for application development and testing","bindable":true,"tags":["mysql","relational"],"max_db_per_node":250,"metadata":{"displayName":"MySQL On Mac".....
+{"services":[{"name":"mariadb","id":"3101b971-1044-4816-a7ac-9ded2e028079","description":"MySQL service for application development and testing","bindable":true,"tags":["mysql","relational"],"max_db_per_node":250,"metadata":{"displayName":"MySQL On Mac".....
 
 ```
 curl -i -X PUT http://test:test@localhost:9000/v2/service_instances/myinstance
@@ -170,7 +170,7 @@ cf create-service-broker mysqlbroker test test http://cf-mysql-node-broker.<your
 ```
 Make the service available to all the organizations.
 ```
-cf enable-service-access mac-mysql
+cf enable-service-access mariadb
 ```
 
 Set MySQL credentials as environment variables to the broker application.
