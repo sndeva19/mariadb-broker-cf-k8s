@@ -1,5 +1,5 @@
 applications:
-- name: cf-mysql-node-broker
+- name: mariadb-nodejs-broker
   path: .
   memory: 256M
   disk_quota: 1024M
@@ -11,4 +11,4 @@ applications:
     MYSQL_USER: <root privilege user>
     MYSQL_PASSWORD: <password>
   routes:
-    - route: cf-mysql-node-broker.mybluemix.net
+    - route: mariadb-nodejs-broker.mybluemix.net
