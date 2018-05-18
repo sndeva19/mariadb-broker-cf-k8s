@@ -144,7 +144,7 @@ var createCredentials = function (binding) {
 
 	var credentials;
 
-	var uri = "mysql://" + binding.username + ":" + binding.password + "@" + process.env.host + ":" + process.env.port + "/" + binding.schema;
+	var uri = "mysql://" + binding.username + ":" + binding.password + "@" + process.env.MYSQL_HOST + ":" + process.env.MYSQL_PORT + "/" + binding.schema;
 
 	credentials = 
 		{
@@ -153,8 +153,8 @@ var createCredentials = function (binding) {
 					uri: uri,
 					username: binding.username,
 					password: binding.password,
-					host: process.env.host,
-					port: process.env.port,
+					host: process.env.MYSQL_HOST,
+					port: process.env.MYSQL_PORT,
 					database: binding.schema
 				}
 		};

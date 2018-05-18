@@ -40,12 +40,12 @@ cd cf-mysql-node-broker
 ```
 
 Open cf-mysql-node-broker/server/app.js and **uncomment** the following lines. Hope they match your **default** settings.
-
-    // process.env['host'] = "localhost";
-    // process.env['port'] = "3306";
-    // process.env['user'] = "root";
-    // process.env['password'] = "";
-
+```
+// process.env['MYSQL_HOST'] = "localhost";
+// process.env['MYSQL_PORT'] = "3306";
+// process.env['MYSQL_USER'] = "root";
+// process.env['MYSQL_PASSWORD'] = "
+```
 Remeber to install [node.js and npm](http://nodejs.org/) first. Then, install the dependencies:
 ```
 npm install

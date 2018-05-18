@@ -1,7 +1,7 @@
-// process.env['host'] = "localhost";
-// process.env['port'] = "3306";
-// process.env['user'] = "root";
-// process.env['password'] = "";
+// process.env['MYSQL_HOST'] = "localhost";
+// process.env['MYSQL_PORT'] = "3306";
+// process.env['MYSQL_USER'] = "root";
+// process.env['MYSQL_PASSWORD'] = "";
 
 /**************************/
 /* config */

@@ -46,10 +46,10 @@ var createPool  = function ()
     var d = Q.defer();
 
     mysqlPool = mysql.createPool({
-      host     : process.env.host,
-      port     : process.env.port,
-      user     : process.env.user,
-      password : process.env.password
+      host     : process.env.MYSQL_HOST,
+      port     : process.env.MYSQL_PORT,
+      user     : process.env.MYSQL_USER,
+      password : process.env.MYSQL_PASSWORD
     });
     
     d.resolve(mysqlPool);

@@ -1,14 +1,14 @@
+applications:
 - name: cf-mysql-node-broker
   path: .
   memory: 256M
   disk_quota: 1024M
   instances: 1
-  host: cf-mysql-node-broker
   env:
     GIT_SSL_NO_VERIFY: true
-    host: <MySQL Server Host>
-    port: <MySQL Server Port>
-    user: <root privilege user>
-    password: <password>
+    MYSQL_HOST: <MySQL Server Host>
+    MYSQL_PORT: <MySQL Server Port>
+    MYSQL_USER: <root privilege user>
+    MYSQL_PASSWORD: <password>
   routes:
     - route: cf-mysql-node-broker.bluemix.chechu.com
