@@ -95,7 +95,7 @@ var dropSchema = function (instanceId) {
 
 };
 
-
+// TODO: Helm install
 exports.create = function(instanceId) {
 
 	var d = Q.defer();
@@ -122,6 +122,7 @@ exports.create = function(instanceId) {
 	return d.promise;
 };
 
+// TODO: Helm uninstall
 exports.delete = function(instanceId) {
 
 	var d = Q.defer();
