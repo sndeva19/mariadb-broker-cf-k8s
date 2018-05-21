@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({
    extended: true 
 }));
 app.use(express.static(path.join(application_root, "public")));
-app.use('/v2', basicAuth.auth('test', 'test'));
+app.use('/v2', basicAuth.auth(process.env.BROKER_USERNAME || 'test', process.env.BROKER_PASSWORD || 'test'));
 app.use('/', routes);
 
 /* config */

@@ -7,6 +7,13 @@ var serviceBindingController = require('../controllers/serviceBindingController'
 var router = express.Router();
 
 /**************************/
+/* REST API healthz */
+router.route('/healthz')
+  .get(function (req, res) {
+   res.send('Health Check: It works!');
+   //console.log("Health Check: It works!");
+});
+/**************************/
 /* REST API hello */
 router.route('/v2')
   .get(function (req, res) {
