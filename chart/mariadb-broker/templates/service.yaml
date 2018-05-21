@@ -3,8 +3,8 @@ kind: Service
 metadata:
   name: {{ template "broker.service" . }}
   labels:
-    app: {{ template "mariadb-nodejs-broker.name" . }}
-    chart: {{ template "mariadb-nodejs-broker.chart" . }}
+    app: {{ template "mariadb-broker.name" . }}
+    chart: {{ template "mariadb-broker.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
@@ -20,5 +20,5 @@ spec:
   {{- end }}
   {{- end }}
   selector:
-    app: {{ template "mariadb-nodejs-broker.name" . }}
+    app: {{ template "mariadb-broker.name" . }}
     release: {{ .Release.Name }}

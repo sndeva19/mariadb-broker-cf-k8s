@@ -3,8 +3,8 @@ kind: ClusterServiceBroker
 metadata:
   name: {{ template "broker.name" . }}
   labels:
-    app: {{ template "mariadb-nodejs-broker.name" . }}
-    chart: {{ template "mariadb-nodejs-broker.chart" . }}
+    app: {{ template "mariadb-broker.name" . }}
+    chart: {{ template "mariadb-broker.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:

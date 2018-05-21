@@ -1,13 +1,13 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "mariadb-nodejs-broker.fullname" . -}}
+{{- $fullName := include "mariadb-broker.fullname" . -}}
 {{- $ingressPath := .Values.ingress.path -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    app: {{ template "mariadb-nodejs-broker.name" . }}
-    chart: {{ template "mariadb-nodejs-broker.chart" . }}
+    app: {{ template "mariadb-broker.name" . }}
+    chart: {{ template "mariadb-broker.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 {{- with .Values.ingress.annotations }}

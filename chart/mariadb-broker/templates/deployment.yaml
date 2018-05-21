@@ -1,22 +1,22 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: {{ template "mariadb-nodejs-broker.fullname" . }}
+  name: {{ template "mariadb-broker.fullname" . }}
   labels:
-    app: {{ template "mariadb-nodejs-broker.name" . }}
-    chart: {{ template "mariadb-nodejs-broker.chart" . }}
+    app: {{ template "mariadb-broker.name" . }}
+    chart: {{ template "mariadb-broker.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "mariadb-nodejs-broker.name" . }}
+      app: {{ template "mariadb-broker.name" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ template "mariadb-nodejs-broker.name" . }}
+        app: {{ template "mariadb-broker.name" . }}
         release: {{ .Release.Name }}
     spec:
       containers:
