@@ -35,11 +35,11 @@ I also prefer to use [MySQL Workbench](http://dev.mysql.com/downloads/workbench/
 
 Clone this repository.
 ```
-git clone https://github.com/fabiogomezdiaz/mariadb-nodejs-broker
-cd mariadb-nodejs-broker
+git clone https://github.com/fabiogomezdiaz/mariadb-broker
+cd mariadb-broker
 ```
 
-Open mariadb-nodejs-broker/server/app.js and **uncomment** the following lines. Hope they match your **default** settings.
+Open mariadb-broker/server/app.js and **uncomment** the following lines. Hope they match your **default** settings.
 ```
 // process.env['MYSQL_HOST'] = "localhost";
 // process.env['MYSQL_PORT'] = "3306";
@@ -150,8 +150,8 @@ If you are confident enough about this example you can skip the local test and d
 
 Clone this repository,
 ```
-git clone https://github.com/fabiogomezdiaz/mariadb-nodejs-broker
-cd mariadb-nodejs-broker
+git clone https://github.com/fabiogomezdiaz/mariadb-broker
+cd mariadb-broker
 ```
 
 Remember to install [cf cli](https://github.com/cloudfoundry/cli/releases) first. Then, push the application:
@@ -161,12 +161,12 @@ cf push
 
 You can access your app at test/test as credentials.
 ```
-http://mariadb-nodejs-broker.<your-cf-app-domain>/v2
+http://mariadb-broker.<your-cf-app-domain>/v2
 ```
 
 Create Service Broker with admin access.
 ```
-cf create-service-broker mysqlbroker test test http://mariadb-nodejs-broker.<your-cf-app-domain>
+cf create-service-broker mysqlbroker test test http://mariadb-broker.<your-cf-app-domain>
 ```
 Make the service available to all the organizations.
 ```
@@ -175,15 +175,15 @@ cf enable-service-access mariadb
 
 Set MySQL credentials as environment variables to the broker application.
 ```
-cf set-env mariadb-nodejs-broker host yourmysqlhost
-cf set-env mariadb-nodejs-broker port yourmysqlport
-cf set-env mariadb-nodejs-broker user 3306
-cf set-env mariadb-nodejs-broker password rootpassword
+cf set-env mariadb-broker host yourmysqlhost
+cf set-env mariadb-broker port yourmysqlport
+cf set-env mariadb-broker user 3306
+cf set-env mariadb-broker password rootpassword
 ```
 
 Restart the broker application to enable those environment variables.
 ```
-cf restart mariadb-nodejs-broker
+cf restart mariadb-broker
 ```
 
 You are now able to create MySQL schema and bind users to your applications.

@@ -1,5 +1,5 @@
 {
-  "name": "mariadb-nodejs-broker",
+  "name": "mariadb-broker",
   "version": "1.0.0",
   "description": "mysql service broker built on node.js for cloud foundry",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fabiogomezdiaz/mariadb-nodejs-broker.git"
+    "url": "https://github.com/fabiogomezdiaz/mariadb-broker.git"
   },
   "keywords": [
     "cf",
@@ -18,7 +18,7 @@
     "service",
     "broker"
   ],
-  "author": "Lei Xu",
+  "author": "Fabio Gomez",
   "license": "ISC",
   "dependencies": {
     "express": "4.0.0",
@@ -31,7 +31,7 @@
     "cfenv": "1.0.x"
   },
   "bugs": {
-    "url": "https://github.com/fabiogomezdiaz/mariadb-nodejs-broker/issues"
+    "url": "https://github.com/fabiogomezdiaz/mariadb-broker/issues"
   },
-  "homepage": "https://github.com/fabiogomezdiaz/mariadb-nodejs-broker"
+  "homepage": "https://github.com/fabiogomezdiaz/mariadb-broker"
 }
