@@ -1,0 +1,81 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "mariadb-nodejs-broker.fullname" . }}
+  labels:
+    app: {{ template "mariadb-nodejs-broker.name" . }}
+    chart: {{ template "mariadb-nodejs-broker.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "mariadb-nodejs-broker.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "mariadb-nodejs-broker.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+              initialDelaySeconds: 5
+              periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+              initialDelaySeconds: 15
+              periodSeconds: 20
+          env:
+          - name: BROKER_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: {{ template "broker.secret" . }}
+                key: username
+          - name: BROKER_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ template "broker.secret" . }}
+                key: password
+          - name: MYSQL_HOST_PUBLIC
+            value: "{{ .Values.mariadb.service.nodeIP }}"
+          - name: MYSQL_HOST
+            value: {{ template "mariadb.host" . }}
+          - name: MYSQL_PORT_PUBLIC
+            value: "{{ .Values.mariadb.service.nodePort }}"
+          - name: MYSQL_PORT
+            value: "3306"
+          - name: MYSQL_USER
+            value: "{{ .Values.mariadb.rootUser.user }}"
+          - name: MYSQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ .Release.Name }}-mariadb
+                key: mariadb-root-password
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
