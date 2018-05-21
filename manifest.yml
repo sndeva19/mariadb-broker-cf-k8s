@@ -6,7 +6,11 @@ applications:
   instances: 1
   env:
     GIT_SSL_NO_VERIFY: true
+    BROKER_USERNAME: test
+    BROKER_PASSWORD: test
+    MYSQL_HOST_PUBLIC: <MySQL Public Server Host>
     MYSQL_HOST: <MySQL Server Host>
+    MYSQL_PORT_PUBLIC: <MySQL Public Server Port>
     MYSQL_PORT: <MySQL Server Port>
     MYSQL_USER: <root privilege user>
     MYSQL_PASSWORD: <password>

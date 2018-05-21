@@ -4,28 +4,28 @@
 services:
 - name: mariadb
   id: 3101b971-1044-4816-a7ac-9ded2e028079
-  description: MySQL service for application development and testing
+  description: MariaDB service for application development and testing
   bindable: true
   tags:
     - mysql
     - relational
   max_db_per_node: 250
   metadata:
-    displayName: MySQL On Mac
+    displayName: MariaDB
     imageUrl: https://raw.githubusercontent.com/docker-library/docs/74e3b3d4d60389208732dbd2c95145868111d959/mariadb/logo.png
-    longDescription: Provisioning a service instance creates a MySQL database. Binding applications to the instance creates unique credentials for each application to access the database
-    providerDisplayName: MySQL Community Edition
-    documentationUrl: http://dev.mysql.com/doc/
-    supportUrl: http://www.mysql.com/products/community/
+    longDescription: Provisioning a service instance creates a MariaDB database. Binding applications to the instance creates unique credentials for each application to access the database
+    providerDisplayName: MariaDB Community Edition
+    documentationUrl: https://mariadb.com/kb/en/library/documentation/
+    supportUrl: https://mariadb.com/kb/en/library/community/
   plans:
   - name: 15mb
     id: 2451fa22-df16-4c10-ba6e-1f682d3dcdc9
-    description: Shared MySQL Server, 15mb persistent disk, 40 max concurrent connections
+    description: Shared MariaDB Server, 15mb persistent disk, 40 max concurrent connections
     max_storage_mb: 15 # in MB
     metadata:
       cost: 0.0
       bullets:
-      - content: Shared MySQL server
+      - content: Shared MariaDB server
       - content: 15 MB storage
       - content: 40 concurrent connections
 

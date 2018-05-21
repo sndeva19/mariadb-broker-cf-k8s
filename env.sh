@@ -1,4 +1,8 @@
+export BROKER_USERNAME=test
+export BROKER_PASSWORD=test
+export MYSQL_HOST_PUBLIC=
 export MYSQL_HOST=
+export MYSQL_PORT_PUBLIC=
 export MYSQL_PORT=
 export MYSQL_USER=
 export MYSQL_PASSWORD=

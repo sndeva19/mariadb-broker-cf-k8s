@@ -1,4 +1,5 @@
 !.gitkeep
+*.log
 .DS_Store
 .idea
 env.sh.*
