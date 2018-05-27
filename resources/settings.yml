@@ -3,7 +3,7 @@
 # file that contains these settings.
 services:
 - name: mariadb
-  id: 3101b971-1044-4816-a7ac-9ded2e028079
+  id: 937ac27d-707f-4d88-a3f4-0b975b0bade4
   description: MariaDB service for application development and testing
   bindable: true
   tags:
@@ -19,7 +19,7 @@ services:
     supportUrl: https://mariadb.com/kb/en/library/community/
   plans:
   - name: 15mb
-    id: 2451fa22-df16-4c10-ba6e-1f682d3dcdc9
+    id: 0472145e-6492-4860-9952-42fa69529872
     description: Shared MariaDB Server, 15mb persistent disk, 40 max concurrent connections
     max_storage_mb: 15 # in MB
     metadata:

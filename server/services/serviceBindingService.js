@@ -194,7 +194,10 @@ exports.destroy = function(binding) {
             d.resolve({});
         })
         .catch(function(error) {
-            if (error.http_code && err.http_code === 410) {
+            var doesNotExist = error.http_code && error.http_code === 410;
+            var accessDenied = error.code && error.code === "ER_TABLEACCESS_DENIED_ERROR";
+
+            if (doesNotExist || accessDenied) {
                 console.log("destroy: service does not exist, but delete anyways");
                 d.resolve({});
 

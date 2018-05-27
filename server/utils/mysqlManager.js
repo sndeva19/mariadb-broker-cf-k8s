@@ -128,12 +128,12 @@ exports.executeQuery = function(queryText){
 			return doQuery(connection, queryText);
 		})
 		.then(function(result) {
-			// console.log("executeQuery result: " + JSON.stringify(result));
+			console.log("executeQuery result: " + JSON.stringify(result));
 			d.resolve(result);
 		})
 		.catch(function(error){
-    		// console.log("error!!");
-    		// console.error(error);
+    		console.log("error!!");
+    		console.error(error);
     		// d.reject(new Error(error));
     		d.reject(error);
 		});
