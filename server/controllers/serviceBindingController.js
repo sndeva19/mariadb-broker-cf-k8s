@@ -12,15 +12,21 @@ exports.save = function(req, res) {
         .then(function(result){
             console.log('result:' + JSON.stringify(result));
             res.set('Content-Type', 'application/json');
-            res.status(200);
+            res.status(201);
             res.send(result);
         })
         .catch(function(error){
             console.log("controller error:");
             console.log(error.stack);
             res.set('Content-Type', 'application/json');
-            res.status(error.http_code);
-            res.send(error.message);
+            if(error.http_code == 409 && error.message == '{"description":"MySQL User already exists!"}') {
+                res.status(200);
+                res.send({});
+            }
+            else {
+	            res.status(error.http_code);
+	            res.send(error.message);
+            }
         })
         .done();
 };
