@@ -82,17 +82,21 @@ var dropSchema = function (instanceId) {
 	var queryText = "DROP SCHEMA IF EXISTS `" + instanceId  + "`";
 
 	console.log("queryText: " + queryText);
-
-	mysqlManager.executeQuery(queryText)
+	
+	var bAvoidDrop = false;
+	if(bAvoidDrop){
+		d.resolve();
+	}
+	else {
+		mysqlManager.executeQuery(queryText)
 		.then(function (result) {
 			d.resolve();
 		})
 		.catch(function(error){
     		d.reject(error);
 		});
-
+	}
 	return d.promise;
-
 };
 
 // TODO: Helm install

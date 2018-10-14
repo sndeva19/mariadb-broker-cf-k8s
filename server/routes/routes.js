@@ -58,6 +58,20 @@ router.route('/v2/service_instances/:instance_id')
 /**************************/
 
 /**************************/
+/* REST API /v2/service_instances/:instance_id/last_operation */
+router.route('/v2/service_instances/:instance_id/last_operation')
+  .get(function (req, res) {
+    console.log("Begin: get /v2/service_instances/:instance_id/last_operation");
+    
+    serviceInstanceController.last_operation(req, res);
+    
+    console.log("End: get /v2/service_instances/:instance_id/last_operation");
+});
+
+
+/**************************/
+
+/**************************/
 /* REST API /v2/service_instances/:instance_id/service_bindings/:binding_id */
 router.route('/v2/service_instances/:instance_id/service_bindings/:binding_id')
   .put(function (req, res) {
